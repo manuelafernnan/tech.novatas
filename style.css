@@ -1,0 +1,6 @@
+body {
+    background-color: black;
+}
+div, p, h1, h2, h3, header, nav, footer{
+    color: aliceblue;
+}

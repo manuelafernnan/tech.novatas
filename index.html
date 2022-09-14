@@ -1,47 +1,79 @@
-<!DOCTYPE html> <!-- DTD - Definição de tipo de documento-->
-<html lang="pt"> <!--Tipo o main no C, inicio do html-->
-
-<head> <!-- ainda não é o documento, mas são informações importantes chamadas metadados-->
-    <meta charset="UTF-8"> <!--é a codificação de caracteres global-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--A pagina se ajusta a resoluçã ode telas diferentes (Responsividade)-->
-    <meta name="author" content="Manuela Fernandes"> <!--autor do codigo-->
-    <title>Tech Novatas</title> <!--cada pagina tem que ter o seu titulo-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta  name =" author " content =" Manuela Fernandes " >
+    <title>Tech.Novatas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<header> <!--cabeçalho-->
-   <h1><strong>Tech.Novatas</strong></h1>
+<body>
+
+    <!--A linha baixo carrega uma imagem aleatória-->
+    <img src = 'https://picsum.photos/200/300' alt = 'Imagem aleatória'>
     <hr>
-</header>
-
-<body> <!--conteudo visual, tudo que vai aparecer-->
-
-    Menu principal
-
     <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="contatos.html">Contatos</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contatos.html">Faça contato</a></li>
+    </ul>
+    <hr>
+    <div>Este texto ocupa uma linha.</div>
+    <div>Este texto ocupa outra linha.</div> <!--CRTL + K + C coloca a linha selecionada em formato comentário-->
+
+    <!--Tags de block -> block-->
+    Texto antes<hr>Texto depois
+    <div>Isso é a tag de bloco mais usada</div>
+    <p>Isso é um parágrafo</p>Conteúdo
+
+    <!--Titulos-->
+    <h1>Titulo mais importante</h1>
+    <h2>Titulo de nivel 2</h2>
+    <h3>Titulo de nivel 3</h3>
+    <h4>Titulo de nivel 4</h4>
+    <h5>Titulo de nivel 5</h5>
+
+    <!--Listas não ordenadas (unordened list)-->
+    <ul>
+        <li>Isso é um item de lista</li>
+        <li>Outro item</li>
     </ul>
 
-    Estou com fome!
-    <br>
-    Estou com sede!
-    <hr>
-    <img src="https://picsum.photos/id/237/200/300" alt = "Imagem Aleatória">
-    <hr>
+    <!--Listas ordenadas (ordened list)-->
+    <ol>
+        <li>Item</li>
+        <li>Outro item</li>
+    </ol>
 
-    <P>
-        AU <strong>AU</strong>AU AU<em>AU</em> AU AU
+    <!-- Tags semânticas de bloco-->
+    <header>Cabeçalho</header>
+    <nav>Menu de navegação</nav>
+    <main>Conteúdo principal</main>
+    <footer>Rodapé</footer>
 
-    </P>
+    <!--Tags em linha (inline)-->
+    <em>Isso</em> é um <strong>texto</strong>bemmmm longooo!
+    <img src = 'https://picsum.photos/200/300' alt = 'Imagem aleatória'>
+    isso é um <a href="https://google.com" target =" _blank " > Site do fessô </a >
 
-    <hr>
+    <!--Tabelas-->
+    <table>
+        <tr>
+            <td>Célula 1 - linha 1</td>
+            <td>Célula 1 - linha 2</td>
+        </tr>
+        <tr>
+            <td>Célula 2 - linha 1</td>
+            <td>Célula 2 - linha 2</td>
+        </tr>
+        <tr>
+            <td colspan="2">Uma só</td>
+        </tr>
+    </table>
 
-    <a href="https://catabits.com.br" target="_blank">Site do fessô</a>
+    <!--tag de espaço (no break space)-->
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
 
-    <hr>
-
-    <input type="text" valeu="J" readonly>
-
+    &copy;
 </body>
 </html>
