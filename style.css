@@ -1,3 +1,78 @@
+/**********************************
+ * Folha de estilos do aplicativo *
+ **********************************/
+
+/***************
+ * Reset geral *
+ ***************/
+
+/* Largura do elemento é absoluta e não tem linha ao redor dos links */
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Reset elementos raiz */
+html, body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Define a fonte padrão do aplicativo */
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+
+    /* Tamanho da fonte padrão → unidade responsiva '1rem'. */
+    font-size: 16px;
+}
+
+/* Reset dos links */
+a {
+    color: steelblue;
+    text-decoration: none;
+}
+
+/* Pseudo classe ":hover" */
+a:hover {
+    color: orangered;
+    text-decoration: underline;
+}
+
+/* Reset dos elementos semânticos */
+header, nav, main, article, aside, footer {
+    display: block;
+}
+
+/* Wrap da página */
+#wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    /* Limita o crescimento horizontal da página em 1080px */
+    max-width: 1024px;
+
+    /* Centraliza */
+    margin: auto;
+
+}
+
+/* Define o fundo do aplicativo */
 body {
-    background-color: thistle;
+    background-attachment: fixed;
+    background-color: purple;
+    background-image: url('/img/bg01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/***************
+* cabeçalho * 
+***************/
+
+/* Logotipo */
+#wrap > header {
+    
 }
