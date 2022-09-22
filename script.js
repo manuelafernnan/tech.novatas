@@ -1,1 +1,3 @@
-console.log("Hello world!");
+$(document).ready(() => {
+    console.log("Olá mundo!");
+});
