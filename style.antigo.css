@@ -1,0 +1,266 @@
+/***********************************************
+ * Folha de estilos do aplicativo              *
+ * Referências: https://www.w3schools.com/css/ *
+ ***********************************************/
+
+/***************
+ * Reset geral *
+ ***************/
+
+/* Largura do elemento é absoluta e não tem linha ao redor dos links */
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Reset dos elementos raiz */
+html, body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Define a fonte padrão do aplicativo */
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+
+    /* Tamanho da fonte padrão. Cria a unidade responsiva '1rem'. */
+    font-size: 16px;
+}
+
+/* Reset dos links */
+a {
+    color: steelblue;
+    text-decoration: none;
+}
+
+/* Pseudo classe ":hover" */
+a:hover {
+    color: orangered;
+    text-decoration: underline;
+}
+
+/* Reset dos elementos semânticos */
+header, nav, main, article, aside, footer {
+    display: block;
+}
+
+/* Wrap da página */
+#wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    /* 
+    Limita o tamanho dro wrap horizontalmente:
+        • Mínimo: 320px - barra de rolagem - espaço de segurança = 280px
+        • Máximo: 1080px (HD) - barra de rolagem - espaço de segurança = 1024px
+    */
+    min-width: 280px;
+    max-width: 1024px;
+
+    /* Centraliza wrap */
+    margin: auto;
+}
+
+/* Define o fundo do aplicativo */
+body {
+    background-attachment: fixed;
+    background-color: purple;
+    background-image: url('/img/bg01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*************
+ * Cabeçalho *
+ *************/
+
+#wrap>header {
+    background-color: rgba(255, 255, 255, 0.908);
+    display: flex;
+    align-items: center;
+}
+
+/* Logotipo usando Font Awesome */
+
+#wrap>header i {
+    font-size: 4rem;
+    color: rgb(255, 160, 255);
+    margin: .25rem .5rem .25rem .25rem;
+    -webkit-text-stroke: 2px rgb(89, 0, 89);
+}
+
+/* Logotipo usando imagem */
+
+#wrap>header img {
+    display: block;
+    height: 3rem;
+    margin: .5rem .5rem .5rem .25rem;
+}
+
+/* Título */
+
+#wrap>header h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0;
+    color: purple;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+/* Slogan */
+
+#wrap>header span {
+    display: block;
+    font-size: .479rem;
+
+    /* Remove o negrito do slogan */
+    font-weight: normal;
+
+    /* Remove a borda do slogan */
+    -webkit-text-stroke: 0px;
+}
+
+/******************
+ * Menu principal *
+ ******************/
+
+#wrap>nav {
+    background-color: rgb(89, 0, 89);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid purple;
+    border-bottom: 1px solid purple;
+}
+
+#wrap>nav a {
+    text-align: center;
+    padding: .5rem;
+    color: rgb(255, 209, 255);
+    transition: .25s;
+}
+
+#wrap>nav a:hover {
+    color: rgb(89, 0, 89);
+    background-color: rgb(255, 209, 255);
+    text-decoration: none;
+}
+
+#wrap>nav a:first-child {
+    margin-right: auto;
+}
+
+#wrap>nav i {
+    font-size: 2rem;
+}
+
+#wrap>nav span {
+    display: block;
+    margin-top: .25rem;
+}
+
+/* Menu principal responsivo */
+
+@media (min-width: 480px) {
+
+    #wrap>nav i {
+        font-size: 1.2rem;
+    }
+
+    #wrap>nav span {
+        display: inline;
+        margin-top: 0;
+    }
+
+}
+
+/************
+ * Conteúdo *
+ ************/
+
+#wrap>main {
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: auto;
+}
+
+#wrap>main article, #wrap>main aside {
+    padding: 0 1rem;
+}
+
+#wrap>main aside {
+    border-top: 3px dotted purple;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: auto;
+}
+
+/* Conteúdo responsivo */
+@media (min-width: 768px) {
+
+    #wrap>main {
+        display: flex;
+    }
+
+    #wrap>main article {
+        flex-grow: 1;
+    }
+
+    #wrap>main aside {
+        border: none;
+        border-left: 3px dotted purple;
+        min-width: 220px;
+        max-width: 220px;
+        overflow: initial;
+    }
+
+}
+
+/**********
+ * Rodapé *
+ **********/
+
+#wrap>footer {
+    background-color: rgb(89, 0, 89);
+    color: rgb(255, 209, 255);
+    border-top: 1px solid purple;
+}
+
+#wrap>footer a {
+    color: rgb(255, 209, 255);
+}
+
+#wrap>footer a:hover {
+    color: rgb(209, 60, 209);
+    text-decoration: none;
+}
+
+#ftop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px dotted rgb(199, 11, 199);
+}
+
+#ftop a {
+    font-size: 1.5rem;
+    padding: .25rem;
+}
+
+#fbottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+}
+
+#fbottom a {
+    display: block;
+    padding: .25rem 0;
+}
+
+#wrap>span {
+    display: none;
+    font-size: .1px;
+}
