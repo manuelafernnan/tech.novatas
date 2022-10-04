@@ -22,13 +22,32 @@
 function runApp() {
 
     // Carrega a página inicial:
-    loadPage('contacts');
+    loadPage('home');
 
     /**
      * jQuery → Quando houver click em um elemento <a>, execute o aplicativo 
      * "routerLink":
      **/
     $(document).on('click', 'a', routerLink);
+
+    // Quando clicar em "Aceita cookies":
+    $(document).on('click', '#accept', acceptCookies);
+
+    // Detecta se o cookie "aceito cookies" já existe:
+    var cookie = getCookie("acceptCookie");
+
+    // Se o cookie existe...
+    if (cookie != "") {
+
+        // Oculta mensagem de cookie:
+        $('#msgCookies').hide();
+
+        // Se não existe...
+    } else {
+
+        // Mostra a mensagem de cookie:
+        $('#msgCookies').show();
+    }
 
 }
 
@@ -138,6 +157,41 @@ function getTitle(title = '') {
         $('title').html(`Tech.Novatas .:. ${title}`);
 
     }
+}
+
+// Processa clique no botão de aceitar cookie:
+function acceptCookies() {
+
+    // Cria o cookie que aceita os cookies:
+    setCookie('acceptCookie', 'true', 365);
+
+    // Ocultar a mensagem de cookie:
+    $('#msgCookies').hide();
+}
+
+// Função que cria cookies:
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+// Função que lê um cookie específico:
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
 
 // jQuery → Executa aplicativo "runApp" quando o documento estiver pronto:

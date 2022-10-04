@@ -1,0 +1,42 @@
+@import url('../contacts/style.css');
+
+.tabs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+ 
+.tab-item {
+    font-weight: bold;
+    padding: .35rem .5rem;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    color: steelblue;
+}
+
+.tab-item i {
+    font-size: 1.2rem;
+    margin-right: .5rem;
+}
+
+.tab-content {
+    display: none;
+}
+
+#tab1 {
+    display: block;
+}
+
+.border-on {
+    border-bottom: 2px solid purple;
+}
+
+@media(min-width: 575px) {
+    .tabs {
+        flex-direction: row;
+        border-bottom: 2px solid purple;
+    }
+}
