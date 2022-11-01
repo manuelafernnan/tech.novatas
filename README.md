@@ -1,2 +1,2 @@
-# Tech.Novatas
- Primeiro aplicativo Web da turma Mulheres.Tech 2022.2.
+# Tech.Novatas.2
+Versão fullstack do aplicativo Tech.Novatas.
