@@ -1,0 +1,59 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Elementos da raiz */
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-attachment: fixed;
+    background-image: url('/img/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    background-color: #e73150;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.navlist>a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.2s;
+    display: flex;
+}
+
+.logo-tech{
+    font-size: 50px;
+    display: flex;
+    margin: 20px;
+}
+

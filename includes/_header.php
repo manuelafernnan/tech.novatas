@@ -15,12 +15,14 @@
 
         <header>
             <div class="logo-tech">
-                <i class="fa-light fa-user-secret"></i>
+                <i class="fa-brands fa-free-code-camp"></i>
             </div>
-            <h1>Tech.Novatas</h1>
+            <div class="title">
+                <h1>Tech.Novatas</h1>
+            </div>
         </header>
 
-        <nav>
+        <nav class="navlist">
             <hr>
             <a href="/">Início</a>
             <a href="/contacts">Contatos</a>
